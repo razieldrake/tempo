@@ -1,0 +1,11 @@
+<p>
+  service-comp works!
+</p>
+
+<div *ngIf="!selectedService">
+<ul class="services">
+    <li *ngFor="let service of services">
+      {{service.idService}} {{service.nameService}} {{service.versionService}}{{OsService}}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,8 @@
+<p>
+  port-comp works!
+</p>
+<ul class="ports">
+    <li *ngFor="let port of ports">
+      {{port.idPort}} {{port.status}} {{port.protocol}}{{port.services}} {{port.host}}
+    </li>
+  </ul>
