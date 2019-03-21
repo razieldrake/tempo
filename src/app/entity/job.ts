@@ -2,7 +2,8 @@ import { Host } from './host';
 import { User } from './user';
 
 export class Job {
-    idJob:number;
+    Number
+    idJob:string;
     nameJob:string;
     descrJob:string;
     statusJob:string;

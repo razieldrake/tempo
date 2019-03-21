@@ -16,6 +16,8 @@ import { UserCompComponent } from './component/user-comp/user-comp.component';
 import { NavigationComponent } from './component/navigation/navigation.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ActionbarComponent } from './component/actionbar/actionbar.component';
+import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
+import { LoginComponent } from './login/login.component';
 
 /*
  *  a function to get the token . Granted by JxwtModule
@@ -34,7 +36,9 @@ import { ActionbarComponent } from './component/actionbar/actionbar.component';
     JobCompComponent,
     UserCompComponent,
     NavigationComponent,
-    ActionbarComponent
+    ActionbarComponent,
+    PdfViewerComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

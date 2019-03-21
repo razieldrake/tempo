@@ -8,6 +8,7 @@ import { PortCompComponent } from './component/port-comp/port-comp.component';
 import { HostCompComponent } from './component/host-comp/host-comp.component';
 import { JobCompComponent } from './component/job-comp/job-comp.component';
 import { UserCompComponent } from './component/user-comp/user-comp.component';
+import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 
 
 const routes:Routes = [
@@ -17,6 +18,7 @@ const routes:Routes = [
   {path: 'hosts',component:HostCompComponent},
   {path: 'jobs',component:JobCompComponent},
   {path: 'users',component:UserCompComponent},
+  {path: 'pdfviewer',component:PdfViewerComponent},
   {path: '',redirectTo: '/users',pathMatch:'full'}
 
 ]

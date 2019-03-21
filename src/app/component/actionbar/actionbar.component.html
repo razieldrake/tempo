@@ -51,7 +51,7 @@
       </div>
     </div>
   </div>
-  
+    
 
 
 
@@ -61,11 +61,14 @@
 
 
     <li class="sub-menu opened">
-      <ul style="display:block;">
         <a [routerLink]="['/logged','dashboard']">
           <i aria-hidden="true" class="icons icon-home size-16"></i>
           <span>Dashboard</span>
         </a>
+      <ul style="display:block;">
+        
+          <li><a routerLink="pdfviewer" class="btn btn-outline-dark" role="button"> Generate PDF</a></li>
+        
       </ul>
     </li>
 
@@ -82,7 +85,7 @@
       <ul style="display:block;">
         <h4>Jobs</h4>
         
-        <li><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">Order a new Job</button></li>
+        <li><button class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">Order a new Job</button></li>
        
         
 
