@@ -1,0 +1,18 @@
+.img-shadow {box-shadow: 0 2px 5px rgba(0, 0, 0, .1)}
+
+#presentationA {position: absolute;top:-3px;right:5%;height:30px;width:30px;padding:8px;}
+#presentationB {position: absolute;top:100px;right:5%;height:30px;width:30px;padding:8px;}
+#presentation1a {position: absolute;top: -10px;left: 23%;height:30px;width:30px;padding:8px;}
+#presentation1b {position: absolute;top:-10px; left: 50%;height:30px;width:30px;padding:8px;}
+#presentation2 {position: absolute;top:-10px;right:11%;height:30px;width:30px;padding:8px;}
+#accueil1 {position: absolute;top:10%;right:5%;height:30px;width:30px;padding:8px;}
+#accueil2 {position: absolute;top:35%;right:5%;height:30px;width:30px;padding:8px;}
+#accueil3 {position: absolute;top:70%;right:5%;height:30px;width:30px;padding:8px;}
+#regroupements1 {position: absolute;top:25%;left:10%;height:30px;width:30px;padding:8px;}
+#regroupements2 {position: absolute;top:25%;left:70%;height:30px;width:30px;padding:8px;}
+#regroupements3 {position: absolute;top:25%;left:82%;height:30px;width:30px;padding:8px;}
+#relance1 {position: absolute;top:70%;left:0;height:30px;width:30px;padding:8px;}
+#relance2 {position: absolute;top:35%;left:15%;height:30px;width:30px;padding:8px;}
+#relance3 {position: absolute;top:20%;left:50%;height:30px;width:30px;padding:8px;}
+#relance4 {position: absolute;top:60%;left:50%;height:30px;width:30px;padding:8px;}
+#relance5 {position: absolute;bottom:7%;right:30%;height:30px;width:30px;padding:8px;}

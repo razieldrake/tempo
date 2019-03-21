@@ -1,8 +1,33 @@
-<p>
-  host-comp works!
-</p>
-<ul class="hosts">
-    <li *ngFor="let host of hosts">
-      {{host.id}} {{host.ip}} {{host.operationSystem}} {{host.isNew}} {{host.ports}} {{host.job}} 
-    </li>
-  </ul>
+<div class="table table-responsive bg-white table-action">
+    <table class="table table-hover table-small">
+      <thead>
+        <tr>
+          <th scope="col">
+             Id host
+          </th>
+          <th scope="col">
+             Host IP
+          </th>
+          <th scope="col">
+             Host Operation System
+          </th>
+          <th scope="col">
+              Is a New Host
+          </th>
+         
+         </tr>
+      </thead>
+      <tbody>
+
+          <tr *ngFor="let host of hosts">
+              <th scope="row">{{host.id}} </th>
+              <td>{{host.ip}}</td>
+              <td>{{host.operationSystem}}</td>
+              <td>{{host.isNew}} </td>
+              <td><button type="button" class="btn btn-primary" (click)="onSelectJob(job)">SELECT</button></td>
+           </tr>
+       
+       </tbody>
+ 
+   </table>
+ </div>

@@ -1,8 +1,190 @@
-<div class = "row" style="background-color: lightyellow">
-        <div class="col-md-2"><a routerLink="users">Users</a></div>
-        <div class="col-md-2"><a routerLink="jobs">Jobs</a></div>
-        <div class="col-md-2"><a routerLink="hosts">Hosts</a></div>
-        <div class="col-md-2"><a routerLink="ports">Ports</a></div>
-        <div class="col-md-2"><a routerLink="services">Services</a></div>
-        <div class="col-md-2"><a routerLink="cves">Cves</a></div>
-</div>
+
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <a class="navbar-brand" href="#">Offensive Security Console </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                      <a class="nav-link" routerLink="users">Users</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="jobs">Jobs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="hosts">Hosts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="ports">Ports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="cves">Cves</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="Language" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="flag flag-en"></span>
+                    <span class="d-block d-lg-none libelle-menu color-text" lang="en" hreflang="en">English</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-small dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                    <li>
+                      <a class="dropdown-item" href="#" lang="fr" hreflang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" lang="de" hreflang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#" lang="es" hreflang="es">Español</a>
+                    </li>
+                    <li class="border-top">
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Languages">Show more</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown user">
+                  <a class="nav-link dropdown-toggle" href="#" id="User" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="/assets/images/user.jpg" alt="avatar" class="rounded-circle">
+                    <span class="d-block d-lg-none libelle-menu color-text">John DOE</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                    <header>
+                      <p class="h4">John DOE</p>
+                    </header>
+                    <li>
+                      <a class="dropdown-item" href="my-identity.html">
+                        <i aria-hidden="true" class="icons icon-user color-text"></i>My identity</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i aria-hidden="true" class="icons icon-user color-text"></i>My company</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i aria-hidden="true" class="icons icon-unlock color-text"></i>Habilitations</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i aria-hidden="true" class="icons icon-settings color-text"></i>Settings</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="RGPD" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i aria-hidden="true" class="icons icon-lock color-text size-20"></i>
+                    <span class="d-block d-lg-none libelle-menu color-text">Centre de confiance numérique (RGPD)</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right width-300">
+                    <li class="px-3">
+                      <p class="h4">Centre de confiance numérique (RGPD)</p>
+                      <p class="color-text">Ce site utilise des cookies et différents services permettant de vous proposer des offres en fonction de votre navigateur
+                        et d'améliorer les performances d'affichage.</p>
+                      <p class="color-text">Vous pouvez autoriser ou bloquer tous ou chacun de ces services.</p>
+                    </li>
+                    <li class="p-3">
+                      <div class="row">
+                        <p class="col-8 bold">Tout accepter</p>
+                        <div class="col-4 text-right">
+                          <label class="switch switch-small">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="px-3">
+                      <div class="row">
+                        <p class="col-8 font-size-12">Techniques</p>
+                        <div class="col-4 text-right">
+                          <label class="switch switch-small">
+                            <input type="checkbox" checked="">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <p class="col-8 font-size-12">Préférences</p>
+                        <div class="col-4 text-right">
+                          <label class="switch switch-small">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <p class="col-8 font-size-12">Statistiques</p>
+                        <div class="col-4 text-right">
+                          <label class="switch switch-small">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <p class="col-8 font-size-12">Marketing</p>
+                        <div class="col-4 text-right">
+                          <label class="switch switch-small">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="border-top">
+                      <a class="dropdown-item" href="rgpd.html" title="En savoir plus sur la protection de vos données personnelles">En savoir plus...</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown dropdown-mega">
+                  <a class="nav-link dropdown-toggle" href="#" id="Support" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i aria-hidden="true" class="icons icon-comments color-text size-20"></i>
+                    <span class="d-block d-lg-none libelle-menu color-text">Contact support</span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                    <li>
+                      <p class="h4">Contact support</p>
+                      <form action="send.php">
+                        <div class="form-group">
+                          <input type="text" value="John DOE">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" value="john.doe@email.com">
+                        </div>
+                        <div class="form-group">
+                          <textarea placeholder="Message" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <button type="button" class="btn btn-primary float-right">
+                            Send
+                          </button>
+                        </div>
+                      </form>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item border-left">
+                  <a class="nav-link" href="#">
+                    <i aria-hidden="true" class="icons icon-start color-text size-20"></i>
+                    <span class="d-block d-lg-none libelle-menu color-text">Deconnexion</span>
+                  </a>
+                </li>
+              </ul>
+            
+           
+          </div>
+        </nav>
+</body>

@@ -1,3 +1,11 @@
 <p>
   user-comp works!
 </p>
+<form>
+<div class="form-group">
+                  <label>Name of the user: <input #username /> </label>
+                  <label>password : <input #password /></label>
+                  
+                </div>
+              </form>
+<button type="button" class="btn btn-outline-dark" (click)="auth(username.value,password.value);">Login</button>

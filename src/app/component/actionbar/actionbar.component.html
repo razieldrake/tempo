@@ -1,29 +1,119 @@
-<ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Create A new Job</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <form>
-      <div class="form-group">
-        <label>Name of the Job: <input #jobName /> </label>
-        <label>Target Ip : <input #target /></label>
-        <label>Target Port: <input #port> /></label>  
+ <!-- Modal ordeer jobs-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label>Name of the Job: <input #jobName /> </label>
+                  <label>Target Ip : <input #target /></label>
+                  <label>Target Port: <input #port> </label>  
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-dark" (click)="Order(jobName.value,target.value,port.value);">Order</button>
+        </div>
       </div>
-    </form>
+    </div>
   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Order');Order(jobName.value,target.value,port.value);">Order</button>
+
+   <!-- Modal Add user-->
+   <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="userModalLabel">Add User</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label>Name of the user: <input #username /> </label>
+                  <label>password : <input #password /></label>
+                  <label>Role : <input #role> </label>  
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-dark" (click)="AddUser(username.value,password.value,role.value);">Add New User</button>
+        </div>
+      </div>
+    </div>
   </div>
-</ng-template>
+  
 
 
 
-<nav class="nav flex-column">
+<nav class="sidebar sidebar-nav sidebar-nav-top sidebar-left bg-white" role="navigation" aria-label="Nav Primary">
+  <ul>
+
+
+
+    <li class="sub-menu opened">
+      <ul style="display:block;">
+        <a [routerLink]="['/logged','dashboard']">
+          <i aria-hidden="true" class="icons icon-home size-16"></i>
+          <span>Dashboard</span>
+        </a>
+      </ul>
+    </li>
+
+
+
+
+
+    <li class="sub-menu opened">
+      <a href="javascript:void(0);">
+        <i aria-hidden="true" class="icons icon-file_corner"></i>
+        <span>Jobs</span>
+      </a>
+
+      <ul style="display:block;">
+        <h4>Jobs</h4>
+        
+        <li><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">Order a new Job</button></li>
+       
+        
+
+      </ul>
+    </li>
+
+
+
+    <li class="sub-menu opened">
+      <a href="javascript:void(0);">
+        <i aria-hidden="true" class="icons icon-columns"></i>
+        <span>Users</span>
+      </a>
+      <ul style="display:block;">
+        <h4>Users</h4>
+        <li><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#userModal">Add a new User</button></li>
+
+      </ul>
+    </li>
+
+
+
+  </ul>
+</nav>
+
+
+
+
+<!-- <nav class="nav flex-column">
     <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Order a New Job</button>
     <a class="nav-link" href="#">Link</a>
     <a class="nav-link" href="#">Link</a>
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </nav>
+  </nav> -->

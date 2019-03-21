@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {JwtModule} from '@auth0/angular-jwt';
+//import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {RouterModule} from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -16,6 +17,13 @@ import { NavigationComponent } from './component/navigation/navigation.component
 import { AppRoutingModule } from './app-routing.module';
 import { ActionbarComponent } from './component/actionbar/actionbar.component';
 
+/*
+ *  a function to get the token . Granted by JxwtModule
+ */
+
+ export function tokenGetter(){
+   return localStorage.getItem('token');
+ }
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +38,18 @@ import { ActionbarComponent } from './component/actionbar/actionbar.component';
   ],
   imports: [
     BrowserModule,
-    NgbModule,
+   // NgbModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    JwtModule.forRoot({
+      config:{
+        tokenGetter: tokenGetter,
+        headerName: 'Authorization',
+        authScheme: 'Bearer',
+        whitelistedDomains: ['localhost:8080','localhost:4200'],
+        blacklistedRoutes:['SecHub.com']
+      }
+    })
     
     
   ],

@@ -22,14 +22,24 @@ export class JobServiceService {
   constructor(private http: HttpClient) { }
 
   public getAll(): Observable<Job[]>{
+    if(localStorage.getItem('token')!=null){
+    let httpop = {
+      headers: new HttpHeaders({ 'token': localStorage.getItem('token')} ),
+   };
+    return this.http.get<Job[]>(this.jobUrl,httpop);
+  } else {
+
     return this.http.get<Job[]>(this.jobUrl,httpOptions);
+
   }
+}
 
   public getOne(idjob: string): Observable<Job>{
   return this.http.get<Job>(this.jobUrl+idjob,httpOptions);
   }
 
   public addOne(job: Job): Observable<Job>{
+    
 
   return this.http.post<Job>(this.jobUrl,job,httpOptions);
   }

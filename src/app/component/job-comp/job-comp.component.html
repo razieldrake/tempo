@@ -1,8 +1,48 @@
-<p>
-  job-comp works!
-</p>
-<ul class="jobs">
-  <li *ngFor="let job of jobs">
-    {{job.idJob}} {{job.nameJob}} {{job.descrJob}} {{job.statusJob}} {{job.startedAt}} {{job.endAt}} {{job.hosts}} {{job.user}}
-  </li>
-</ul>
+
+<div class="table table-responsive bg-white table-action">
+  <table class="table table-hover table-small">
+    <thead>
+      <tr>
+        <th scope="col">
+           Id joB
+        </th>
+        <th scope="col">
+             name of the job
+        </th>
+        <th scope="col">
+             desvcription
+        </th>
+        <th scope="col">
+              status
+        </th>
+        <th scope="col">
+               Started at 
+        </th>
+        <th scope="col">
+                  end at
+        </th>
+       </tr>
+    </thead>
+    <tbody>
+          
+       
+           <tr *ngFor="let job of jobs">
+             <th scope="row">{{job.idJob}}</th>
+             <td>{{job.nameJob}}</td>
+             <td>{{job.descrJob}}</td>
+             <td>{{job.statusJob}}</td>
+             <td>{{job.startedAt}}</td>
+             <td>{{job.endAt}}</td>
+             <td><button type="button" class="btn btn-primary" (click)="onSelectJob(job)">SELECT</button></td>
+          </tr>
+      
+      </tbody>
+
+  </table>
+</div>
+
+
+<div *ngIf="selectedJob">
+  
+
+</div>

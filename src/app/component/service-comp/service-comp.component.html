@@ -1,11 +1,36 @@
-<p>
-  service-comp works!
-</p>
+<div class="table table-responsive bg-white table-action">
+    <table class="table table-hover table-small">
+      <thead>
+        <tr>
+          <th scope="col">
+             Id Service
+          </th>
+          <th scope="col">
+               Name Service
+          </th>
+          <th scope="col">
+               Version Service
+          </th>
+          <th scope="col">
+                OS
+          </th>
+         
+         </tr>
+      </thead>
+      <tbody>
 
+          <tr *ngFor="let service of services">
+              <th scope="row">{{service.idService}} </th>
+              <td>{{service.nameService}}</td>
+              <td>{{service.versionService}}</td>
+              <td>{{OsService}}</td>
+              <td><button type="button" class="btn btn-primary" (click)="onSelectJob(job)">SELECT</button></td>
+           </tr>
+       
+       </tbody>
+ 
+   </table>
+ </div>
 <div *ngIf="!selectedService">
-<ul class="services">
-    <li *ngFor="let service of services">
-      {{service.idService}} {{service.nameService}} {{service.versionService}}{{OsService}}
-    </li>
-  </ul>
+
 </div>

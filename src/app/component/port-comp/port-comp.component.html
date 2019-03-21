@@ -1,8 +1,30 @@
-<p>
-  port-comp works!
-</p>
-<ul class="ports">
-    <li *ngFor="let port of ports">
-      {{port.idPort}} {{port.status}} {{port.protocol}}{{port.services}} {{port.host}}
-    </li>
-  </ul>
+<div class="table table-responsive bg-white table-action">
+    <table class="table table-hover table-small">
+      <thead>
+        <tr>
+          <th scope="col">
+             Port Number
+          </th>
+          <th scope="col">
+              Status Port
+          </th>
+          <th scope="col">
+              Reason Port
+          </th>
+          
+         
+         </tr>
+      </thead>
+      <tbody>
+
+          <tr *ngFor="let port of ports">
+              <th scope="row">{{port.idPort}}</th>
+              <td>{{port.status}}</td>
+              <td>{{port.protocol}}</td>
+              <td><button type="button" class="btn btn-primary" (click)="onSelectJob(job)">SELECT</button></td>
+           </tr>
+       
+       </tbody>
+ 
+   </table>
+ </div>
