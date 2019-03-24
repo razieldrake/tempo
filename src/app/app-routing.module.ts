@@ -18,7 +18,7 @@ const routes:Routes = [
   {path: 'hosts',component:HostCompComponent},
   {path: 'jobs',component:JobCompComponent},
   {path: 'users',component:UserCompComponent},
-  {path: 'pdfviewer',component:PdfViewerComponent},
+  {path: 'pdfviewer/:idJob',component:PdfViewerComponent},
   {path: '',redirectTo: '/users',pathMatch:'full'}
 
 ]

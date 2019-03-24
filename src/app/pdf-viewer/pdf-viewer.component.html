@@ -4,8 +4,59 @@
     <h3 class="alert-heading">Report</h3>
     <h5 class="alert-heading">Disclosure</h5>
     <p>This report has been automaticly generated juste to improve the presentationn of the data through the process of the report. it does not replace the human effectivness of the explanation</p>
+    <button type="button" class="btn btn-dark" (click)="acceptPDF()">Validate export to pdf</button>
+  </div>
+<div id="rep">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="/assets/images/branding/logos/be-almerys.svg" alt="Be-Almerys" class="rounded float-left">
+    </div>
+    <div class="col-md-6 text-center">
+      <h1>Vulnerability Repport</h1>
+    </div>
+    <div class="col-md-3">
+        <h4>Commanditary : </h4>
+    </div>
+  </div>
+  <div class="alert alert-dark text-center" >
+    
+      <strong>Job :</strong>{{savedjob.nameJob}} <strong>On</strong> {{savedjob.startedAt}} 
+    
+  </div>
+    <ul>
+      <li *ngFor="let h of savedjob.host">
+        <div class="card text-center">
+          <div class="card-header">
+            <h2>{{h.ip}}</h2>
+          </div>
+          <div class="card-body text-left">
+            <ul>
+              <li *ngFor="let p of h.ports">
+                Port : {{p.idPort}} is open with reason {{p.protocol}} is {{p.status}}
+                <ul>
+                   <h5>Lis of services who has be ran on</h5>
+                  <li *ngFor="let s of p.services">
+                    {{s.nameService}} version {{s.versionService}}
+                      <ul *ngIf="s.cve != null">
+                        <li *ngFor="let c of s.cve">
+                          <a href="https://vulners.com/cve/{{c.idCVE}}">{{c.idCVE}}</a> {{c.baseScoreV2}} {{c.impactScoreV2}} {{c.vectorv2}} {{c.attackVectorV2}}
+                           <p> {{c.descCVE}} </p>
+
+                        </li>
+                        
+                      </ul>
+                    
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      </li>
+    </ul>
+    
   </div>
 
-
-
 </div>
+

@@ -5,6 +5,8 @@ export class Service {
     idService:number;
     nameService:string;
     versionService:string;
+    OsService:string;
+    guessedOSService:string;
+    cve:Cve[];
     port:Port;
-    cves:Cve[];
 }
